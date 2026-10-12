@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container version="2">
+  <Name>navidrome-stat</Name>
+  <Repository>stepaniah/navidrome-statistic:latest</Repository>
+  <Registry>https://hub.docker.com/r/stepaniah/navidrome-statistic/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/StepaniaH/navidrome-stat/issues</Support>
+  <Project>https://github.com/StepaniaH/navidrome-stat</Project>
+  <ReadMe>https://github.com/StepaniaH/navidrome-stat/blob/main/docs/unraid.md</ReadMe>
+  <Overview>Self-hosted listening statistics for Navidrome. Explore playback history, artist and album rankings, listening charts, and monthly and yearly reviews across clients and servers. Uses a local SQLite database. Set a dashboard administrator token, then add your Navidrome servers in Settings &gt; Connections after signing in. Recording depends on playback reported to Navidrome; installation does not recover a complete past history.</Overview>
+  <Category>MediaApp:Music Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:39421]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/deploy/unraid/navidrome-stat.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/assets/icon.svg</Icon>
+  <Icon-black>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/assets/icon-dark.svg</Icon-black>
+  <Screenshot>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/assets/screenshots/dashboard-frappe-top.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/assets/screenshots/dashboard-frappe-charts.png</Screenshot>
+  <License>MIT</License>
+  <ExtraSearchTerms>navidrome subsonic music listening statistics history listenbrainz</ExtraSearchTerms>
+  <ExtraParams/>
+  <Requires>A reachable Navidrome server and a dedicated local appdata directory writable by UID/GID 1000:1000. Prepare the directory as described in the ReadMe before installation. Run one instance per set of sources. Use an HTTPS reverse proxy for remote access.</Requires>
+  <Config Name="WebUI" Target="39421" Default="39421" Mode="tcp" Description="Dashboard port. Change the host port if it is already in use; keep container port 39421." Type="Port" Display="always" Required="true" Mask="false">39421</Config>
+  <Config Name="Appdata" Target="/data" Default="/mnt/user/appdata/navidrome-stat" Mode="rw" Description="Dedicated local directory for SQLite, the credential key, and artwork cache. Must be writable by UID/GID 1000:1000; see the ReadMe before installing." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/navidrome-stat</Config>
+  <Config Name="Administrator token" Target="STATS_API_TOKEN" Default="" Description="Required: enter a long, random token for dashboard login. Keep it private. Add Navidrome connections in the dashboard after signing in." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Database path" Target="DATABASE_URL" Default="/data/navidrome_stats.db" Description="SQLite file inside the persistent appdata mount. Keep this path unchanged for normal installations." Type="Variable" Display="advanced" Required="true" Mask="false">/data/navidrome_stats.db</Config>
+  <Config Name="Viewer token" Target="STATS_READ_ONLY_TOKEN" Default="" Description="Optional read-only dashboard token. Must differ from the administrator and ListenBrainz tokens. Leave empty to disable viewer access." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Secure session cookie" Target="SESSION_COOKIE_SECURE" Default="false|true" Description="Set true when accessing the dashboard through HTTPS. Leave false for direct HTTP access." Type="Variable" Display="advanced" Required="true" Mask="false">false</Config>
+  <Config Name="Protect metrics" Target="STATS_METRICS_AUTH" Default="true|false" Description="Require administrator authentication for the metrics endpoint." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
+</Container>

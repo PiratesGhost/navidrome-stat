@@ -2,6 +2,8 @@
 
 [简体中文](deployment.zh-CN.md) · [Documentation](README.md)
 
+For Unraid's Docker Manager, use the [Unraid installation guide](unraid.md).
+
 ## Requirements
 
 - Docker Engine with Docker Compose v2

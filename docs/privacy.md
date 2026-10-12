@@ -24,6 +24,8 @@ Credentials supplied through `NAVIDROME_URL`, `NAVIDROME_USER`, and `NAVIDROME_P
 
 The settings APIs return configured URLs and usernames to administrator sessions, but never return saved passwords. Connection tests and `/api/diagnostics` return stable failure categories rather than upstream exception text. The diagnostics response contains aggregate connection, collector, and history counts but omits URLs, usernames, passwords, source IDs, and playback metadata; it is protected whenever either dashboard token is configured and is unavailable to viewer sessions. Protect the database, Docker volume, `.env` file, and backups as credentials.
 
+On Unraid, environment values entered in Docker Manager, including dashboard tokens, are also stored in its saved container XML and Docker configuration. Password masking only hides the input on screen; it does not encrypt those stored values. Protect saved templates and flash backups as credentials. The [Unraid template](unraid.md) configures Navidrome connections through the application after login, with saved passwords protected by the appdata key described above.
+
 Subsonic authentication uses token and salt query parameters. The application avoids logging upstream request URLs, but reverse proxies, network tools, and the Navidrome server may have their own access logs. Configure those systems so authentication query parameters are not retained or shared.
 
 ## Retention and data controls

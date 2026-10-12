@@ -45,6 +45,8 @@ Navidrome Stat 采集上报到 Navidrome 服务器的播放活动，将记录保
 
 ## 快速开始
 
+Unraid 用户可按 [Docker Manager 模板指南](docs/unraid.zh-CN.md)安装。
+
 需要 Docker Compose v2，以及容器能够访问的 Navidrome 账号。示例使用当前稳定版 [v0.9.5](https://github.com/StepaniaH/navidrome-stat/releases/tag/v0.9.5)。
 
 新建一个目录，在其中保存下面两个文件。先创建 `.env`，替换示例值，并为仪表盘设置一个足够长的随机 token：

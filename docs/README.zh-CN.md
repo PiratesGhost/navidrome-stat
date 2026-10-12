@@ -5,6 +5,7 @@
 ## 安装与运行
 
 - [Docker 部署](deployment.zh-CN.md)：安装发布镜像、连接服务器、持久化数据。
+- [Unraid 安装](unraid.zh-CN.md)：安装 Docker Manager 模板、准备 appdata、更新容器。
 - [配置参考](configuration.zh-CN.md)：环境变量、默认值与访问 token。
 - [运维指南](operations.zh-CN.md)：更新、备份、恢复与故障排查。
 

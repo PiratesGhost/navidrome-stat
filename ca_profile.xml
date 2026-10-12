@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityApplications>
+  <Profile>Navidrome Stat collects listening activity from Navidrome and provides playback history, listening charts, and monthly and yearly reviews. This repository contains the application, its Unraid Docker template, documentation, and issue tracker.</Profile>
+  <Icon>https://raw.githubusercontent.com/StepaniaH/navidrome-stat/main/assets/icon.svg</Icon>
+  <WebPage>https://github.com/StepaniaH/navidrome-stat</WebPage>
+  <Forum>https://github.com/StepaniaH/navidrome-stat/issues</Forum>
+</CommunityApplications>

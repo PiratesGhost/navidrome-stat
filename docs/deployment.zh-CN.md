@@ -2,6 +2,8 @@
 
 [English](deployment.md) · [文档目录](README.zh-CN.md)
 
+使用 Unraid Docker Manager 时，请按 [Unraid 安装指南](unraid.zh-CN.md)操作。
+
 ## 前置条件
 
 - Docker Engine 与 Docker Compose v2

@@ -5,6 +5,7 @@
 ## Install and run
 
 - [Docker deployment](deployment.md): install a published image, connect servers, and persist data.
+- [Unraid installation](unraid.md): install the Docker Manager template, prepare appdata, and update the container.
 - [Configuration reference](configuration.md): environment variables, defaults, and access tokens.
 - [Operations](operations.md): update, back up, restore, and diagnose problems.
 

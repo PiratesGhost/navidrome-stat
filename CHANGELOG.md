@@ -4,6 +4,10 @@ All notable user-facing changes are documented in this file. The format follows 
 
 ## [Unreleased]
 
+### Added
+
+- Unraid Docker Manager template, Community Applications repository metadata, and English and Simplified Chinese installation guides.
+
 ## [0.9.5] - 2026-10-03
 
 ### Added

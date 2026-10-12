@@ -111,6 +111,12 @@ python3 scripts/check_md_links.py
 git diff --check
 ```
 
+## Unraid template
+
+The Docker Manager template is `deploy/unraid/navidrome-stat.xml`; Community Applications repository metadata is in the root `ca_profile.xml`. The template follows the stable `latest` image. Keep the English and Simplified Chinese [Unraid guides](docs/unraid.md) in sync with changes to ports, paths, environment variables, and installation steps.
+
+When changing template behavior, verify installation, authentication, appdata permissions, connection setup, persistence, and upgrades. Before submitting or updating a Community Applications listing, run **Validate** and **Scan** in the [submission portal](https://ca.unraid.net/submit/new). The template and its linked assets must be publicly accessible. See the [template field reference](https://ca.unraid.net/submit/help/xml-field-reference) and [repository profile requirements](https://ca.unraid.net/submit/help/repository-info-xml).
+
 ## Maintainer releases
 
 Releases are tag-only: pushing a strict semantic-version tag starts the release workflow. The workflow validates the release metadata, runs the complete test workflow and container smoke test, publishes `stepaniah/navidrome-statistic:<tag>`, and creates a GitHub Release with the changelog section, image digest, and rollback guidance. Stable tags update `stepaniah/navidrome-statistic:latest`; prerelease tags do not.

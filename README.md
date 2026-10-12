@@ -52,6 +52,8 @@ Screenshots use synthetic demo data.
 
 ## Quick start
 
+For Unraid, follow the [Docker Manager template guide](docs/unraid.md).
+
 You need Docker Compose v2 and a Navidrome account accessible from the container. The example uses the current stable release, [v0.9.5](https://github.com/StepaniaH/navidrome-stat/releases/tag/v0.9.5).
 
 Create a directory containing these two files. In `.env`, replace the example values and choose a long, random dashboard token:
