@@ -11,7 +11,7 @@ export const SUPPORTED_LOCALES = Object.freeze([
     { code: 'de', native: 'Deutsch' },
     { code: 'es', native: 'Español' },
     { code: 'fr', native: 'Français' },
-    { code: "ru", native: "Русский", },
+    { code: "ru", native: 'Русский', },
     { code: 'ja', native: '日本語' },
     { code: 'zh-CN', native: '简体中文' },
     { code: 'zh-TW', native: '繁體中文' },
